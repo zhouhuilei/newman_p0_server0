@@ -14,14 +14,14 @@
 						"id": "34874ede-b68a-4f8f-a19f-6d24843af59e",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.have.status(404);\r",
 							"});\r",
 							"pm.test(\"status==1\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.status).to.eql(1);\r",
+							"    pm.expect(jsonData.status).to.eql(0);\r",
 							"});\r",
 							"pm.test(\"code=ok\", function () {\r",
-							"    pm.expect(pm.response.text()).to.include('\"result\":{\"credits_page\":{\"code\":\"ok\"');\r",
+							"    pm.expect(pm.response.text()).to.include('\"result\":{\"credits_page\":{\"code\":\"failed\"');\r",
 							"});"
 						],
 						"type": "text/javascript"
