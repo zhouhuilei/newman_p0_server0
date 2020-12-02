@@ -162,7 +162,7 @@
 						"id": "f3df1bb6-c9e3-4a23-badc-7db7fb37d9d9",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.have.status(400);\r",
 							"});\r",
 							"pm.test(\"status==1\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
